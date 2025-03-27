@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Outfit;
+    font-weight: 100 900;
+    src: url("/src/Assets/Fonts/Outfit-VariableFont_wght.ttf") format("ttf");
+}
+@font-face {
+    font-family: Typewriter;
+    src: url("/src/Assets/Fonts/rm_typerighter_old.ttf") format("ttf");
+}
+
+@theme {
+
+    /* Colours */
+    --color-blacktext: #05080A;
+    --color-whitetext: #EDEDED;
+
+    --color-background-green: #A29653;
+    --color-background-green-50: #94894C;
+
+    --color-primary-pink: #F2C2BB;
+    --color-primary-pink-50: #F8E0DD;
+
+    --color-secondary-purple: #A43D62;
+
+    --color-accent-orange: #F78154;
+
+    /* Fonts */
+    --font-Headings: ["Outfit", --default-mono-font-family];
+
+}
+
+@layer base {
+    h1 {
+        font-family: var(Headings);
+        font-weight: 100;
+    }
+    h2 {
+        font-family: var(Headings);
+        font-weight: 200;
+    }
+    h3 {
+        font-family: var(Headings);
+        font-weight: 100;
+    }
+    h4 {
+        font-family: var(Headings);
+        font-weight: 100;
+    }
+    h5 {
+        font-family: var(Headings);
+        font-weight: 100;
+    }
+    p {
+        font-family: var(--default-mono-font-family);
+    }
+    a {
+        font-family: var(--default-mono-font-family);
+    }
+
+}
