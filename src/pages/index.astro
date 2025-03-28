@@ -1,12 +1,17 @@
 ---
 import "../styles/global.css"; // Import tailwind styles
 import { Image } from 'astro:assets'; // Import image class
+
+//Import images
 import heroImage from "../Assets/HomePage/Hero.jpg";
 import logo from "../Assets/Logos/Artboard 1@0.5x.png"
 import logoNoText from "../Assets/Logos/Logo No Text-0.5x.png"
 import aboutImage from "../Assets/HomePage/About Us.jpg"
 import nathanielProfile from "../Assets/HomePage/Nathaniel profile shot.jpg"
 import rubyProfile from "../Assets/HomePage/Ruby Profile Shot.jpg"
+
+// Import components
+import WorkshopCard from "../components/workshopCard.astro";
 ---
 
 <html lang="en">
@@ -56,59 +61,27 @@ import rubyProfile from "../Assets/HomePage/Ruby Profile Shot.jpg"
 			<h2 class="text-5xl 2xl:text-7xl">Our Workshops</h2>
 			<div class="w-full flex flex-col lg:flex-row justify-between mt-10">
 
-				<div class="w-full lg:w-[calc(0.3*100%)] rounded-2xl bg-primary-pink-50 p-6 mb-4 relative">
-					<div class="w-full flex flex-row mb-5 justify-between">
-						<div class="text-secondary-purple text-4xl lg:text-5xl">25<br>Mar</div>
-						<Image
-						src={logo} alt={"The logo of Oak and Pen. An oak tree icon that blends into a fountain pin nib."}
-						style={"--fit: contain;"}
-						width={96}
-						height={96}
-						class={"rounded-4xl"}
-						/>
-					</div>
-					<h3 class="text-3xl 2xl:text-5xl">Workshop Title: A Very Long One</h3>
-					<p class="font-light leading-tight mt-4 mb-6 text-base md:text-lg lg:text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" class="absolute bottom-2.5 right-2.5 size-6 stroke-secondary-purple fill-none justify-self-end">
-						<path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-				</div>
+				<WorkshopCard 
+				title="Workshop Title: A Very Long One"
+				description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+				day="25"
+				month="Mar"
+				/>
 
-				<div class="w-full lg:w-[calc(0.3*100%)] rounded-2xl bg-primary-pink-50 p-6 mb-4 relative">
-					<div class="w-full flex flex-row mb-5 justify-between">
-						<div class="text-secondary-purple text-4xl lg:text-5xl">25<br>Mar</div>
-						<Image
-						src={logo} alt={"The logo of Oak and Pen. An oak tree icon that blends into a fountain pin nib."}
-						style={"--fit: contain;"}
-						width={96}
-						height={96}
-						class={"rounded-4xl"}
-						/>
-					</div>
-					<h3 class="text-3xl 2xl:text-5xl">Workshop Title: A Very Long One</h3>
-					<p class="font-light leading-tight mt-4 mb-6 text-base md:text-lg lg:text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" class="absolute bottom-2.5 right-2.5 size-6 stroke-secondary-purple fill-none justify-self-end">
-						<path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-				</div>
+				<WorkshopCard 
+				title="Workshop Title: A Very Long One"
+				description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+				day="25"
+				month="Mar"
+				/>
 
-				<div class="w-full lg:w-[calc(0.3*100%)] rounded-2xl bg-primary-pink-50 p-6 mb-4 relative">
-					<div class="w-full flex flex-row mb-5 justify-between">
-						<div class="text-secondary-purple text-4xl lg:text-5xl">25<br>Mar</div>
-						<Image
-						src={logo} alt={"The logo of Oak and Pen. An oak tree icon that blends into a fountain pin nib."}
-						style={"--fit: contain;"}
-						width={96}
-						height={96}
-						class={"rounded-4xl"}
-						/>
-					</div>
-					<h3 class="text-3xl 2xl:text-5xl">Workshop Title: A Very Long One</h3>
-					<p class="font-light leading-tight mt-4 mb-6 text-base md:text-lg lg:text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" class="absolute bottom-2.5 right-2.5 size-6 stroke-secondary-purple fill-none justify-self-end">
-						<path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-					</svg>
-				</div>
+				<WorkshopCard 
+				title="Workshop Title: A Very Long One"
+				image={nathanielProfile}
+				description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+				day="25"
+				month="Mar"
+				/>
 
 			</div>
 			<div class="w-full flex justify-end">
