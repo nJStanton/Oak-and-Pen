@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://nJStanton.github.io',
+    base: '/Oak-and-Pen',
     vite: {
       plugins: [tailwindcss()],
     },
