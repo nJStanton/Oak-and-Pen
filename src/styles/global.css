@@ -5,10 +5,6 @@
     font-weight: 100 900;
     src: url("/src/Assets/Fonts/Outfit-VariableFont_wght.ttf") format("ttf");
 }
-@font-face {
-    font-family: Typewriter;
-    src: url("/src/Assets/Fonts/rm_typerighter_old.ttf") format("ttf");
-}
 
 @theme {
 
@@ -16,11 +12,19 @@
     --color-blacktext: #05080A;
     --color-whitetext: #EDEDED;
 
-    --color-background-green: #A29653;
-    --color-background-green-50: #94894C;
+    --color-background-green-0: #6b6338;
+    --color-background-green-10: #7b734c;
+    --color-background-green-20: #8b8361;
+    --color-background-green-30: #9b9476;
+    --color-background-green-40: #aba58b;
+    --color-background-green-50: #bcb6a2;
 
-    --color-primary-pink: #F2C2BB;
-    --color-primary-pink-50: #F8E0DD;
+    --color-primary-pink-0: #f2c2bb;
+    --color-primary-pink-010: #f4c9c2;
+    --color-primary-pink-020: #f6cfca;
+    --color-primary-pink-030: #f7d6d1;
+    --color-primary-pink-040: #f9ddd9;
+    --color-primary-pink-050: #fae4e0;
 
     --color-secondary-purple: #A43D62;
 
@@ -34,23 +38,18 @@
 @layer base {
     h1 {
         font-family: var(Headings);
-        font-weight: 100;
     }
     h2 {
         font-family: var(Headings);
-        font-weight: 100;
     }
     h3 {
         font-family: var(Headings);
-        font-weight: 100;
     }
     h4 {
         font-family: var(Headings);
-        font-weight: 100;
     }
     h5 {
         font-family: var(Headings);
-        font-weight: 100;
     }
     p {
         font-family: var(--default-mono-font-family);
@@ -59,4 +58,34 @@
         font-family: var(--default-mono-font-family);
     }
 
+}
+
+@layer utilities {
+    .font-thin {
+        font-variation-settings: 'wght' 100;
+    }
+    .font-extralight {
+        font-variation-settings: 'wght' 200;
+    }
+    .font-light {
+        font-variation-settings: 'wght' 300;
+    }
+    .font-normal {
+        font-variation-settings: 'wght' 400;
+    }
+    .font-medium {
+        font-variation-settings: 'wght' 500;
+    }
+    .font-semibold {
+        font-variation-settings: 'wght' 600;
+    }
+    .font-bold {
+        font-variation-settings: 'wght' 700;
+    }
+    .font-extrabold {
+        font-variation-settings: 'wght' 800;
+    }
+    .font-black {
+        font-variation-settings: 'wght' 900;
+    }
 }

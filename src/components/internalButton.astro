@@ -1,0 +1,20 @@
+---
+
+interface Props {
+    link: string;
+    text: string;
+}
+
+const {
+    link,
+    text
+} = Astro.props;
+---
+
+<a 
+    class="flex mt-4 lg:mt-7 py-2 px-1 items-center border-b-2 border-primary-pink-0 text-primary-pink-0 hover:bg-linear-to-t hover:from-primary-pink-0 hover:to-20% hover:to-transparent text-lg 2xl:text-xl font-light"
+    href={link}
+    target="_self"
+    >
+    {text}
+</a>
