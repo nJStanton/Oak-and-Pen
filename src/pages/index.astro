@@ -13,15 +13,17 @@ import rubyProfile from "../Assets/HomePage/Ruby Profile Shot.jpg"
 import WorkshopCard from "../components/workshopCard.astro";
 import InternalButton from "../components/internalButton.astro";
 import ExternalButton from "../components/externalButton.astro";
+import Seo from "../components/seo.astro";
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Oak and Pen</title>
+		<Seo 
+			title="Oak & Pen Writing Workshops" 
+			description="Find your inspiration for writing by exploring the great outdoors and local history." 
+			link="/"
+			
+			/>
 	</head>
 	<body class="bg-background-green-0 text-whitetext px-3 xl:px-12 2xl:px-24 mb-80">
 		<!-- Hero -->
