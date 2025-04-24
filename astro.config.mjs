@@ -7,7 +7,7 @@ import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
   // 'http://localhost:4321'
-  site: 'https:/oakandpen.co.uk',
+  site: 'https://oakandpen.co.uk',
 
   vite: {
     plugins: [tailwindcss()],

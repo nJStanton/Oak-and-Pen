@@ -15,7 +15,7 @@ const {
     title, 
     description, 
     noIndex = false,
-    canonical = null,
+    canonical = "",
     image = defaultImage
 } = Astro.props;
 
@@ -23,6 +23,7 @@ let robotsFollow = "index, follow"
 if (noIndex) {
     robotsFollow = "index, nofollow"
 } 
+const metaPageUrl = Astro.site + canonical
 const faviconLink = Astro.site + defaultImage.src
 const metaImageAbsoluteURL = Astro.site + image.src
 ---
@@ -40,13 +41,13 @@ const metaImageAbsoluteURL = Astro.site + image.src
     <title>{title}</title>
     <meta name="description" content={description} />
     {/* Canonical link is just the page's URL. Must be injected on page creation */}
-    <!-- <link rel="canonical" href={metaPageUrl} />   -->
+    <link rel="canonical" href={metaPageUrl} />  
 
     {/* Open Graph Tags */}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={metaImageAbsoluteURL} />
-    <!-- <meta property="og:url" content={metaPageUrl} /> -->
+    <meta property="og:url" content={metaPageUrl} />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
