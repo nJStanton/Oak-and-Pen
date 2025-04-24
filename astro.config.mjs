@@ -21,7 +21,8 @@ export default defineConfig({
   },
 
   experimental: {
-    responsiveImages: true
+    responsiveImages: true,
+    session: true
   },
 
   adapter: netlify()
